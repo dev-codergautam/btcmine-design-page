@@ -1,8 +1,3 @@
-.how-section1 {
-    margin-top: -15%;
-    padding: 7%;
-}
-
 .how-section1 h4 {
     font-weight: bold;
     font-size: 30px;
@@ -16,15 +11,32 @@
 .how-section1 .row {
     margin-top: 5%;
 }
-
-.how-img {
+.tc{
+    color: #186ba2;
+}
+.stepbody{
+    width:150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20%;
+    padding-left: 4px;
+    padding-top: 40%;
+    background-color: #186ba2;
+}
+.stepnumber {
+    color: #fff;
+    font-size: 72px;
+    font-weight: 600;
     text-align: center;
+    margin-left: 50px;
 }
-
-.how-img img {
-    width: 40%;
+.slogantext{
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.1rem;
+    color: #186ba2;
+    font-family: sans-serif;
 }
-
 .stepwise {
     text-transform: uppercase;
     padding: 0;
@@ -35,7 +47,10 @@
     
     width: auto;
 }
+.stepcard{
+    border: 2px solid #186ba2;
+}
 .hrbrand{
-    border-bottom: 3px double #333;
-    width: 140px;
+    border-bottom: 3px double #186ba2;
+    width: 100px;
 }
