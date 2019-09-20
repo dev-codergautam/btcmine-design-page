@@ -14,15 +14,30 @@
 
     <link href="assets/css/style.css" rel="stylesheet" />
     <link href="assets/css/step.css" rel="stylesheet" />
+    <link href="assets/css/wave.css" rel="stylesheet" />
     <link href="assets/color/default.css" rel="stylesheet" />
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700|Quicksand:300,400,500,600,700" rel="stylesheet">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <script src="assets/js/clipboard.min.js"></script>
 </head>
 
 <body>
     <script src="assets/js/ityped.js"></script>
+    <!-- Modal -->
+    <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                
+                <div class="modal-body ">
+                   <p style="text-align: center">Hosting Address  Copied Successfully <i class="fas fa-check-circle ml-1"></i></p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
     <section id="intro">
         <div class="slogan">
             <div class="icon">
@@ -52,7 +67,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="heading">
-                        <h3>Step's Of <span>Mining</span><i class="fas fa-funnel-dollar"></i></h3>
+                        <h3>Step's Of <span>Mining</span> <i class="fas fa-funnel-dollar"></i></h3>
                     </div>
 
                 </div>
@@ -68,7 +83,7 @@
                     <p class="mt-3 text-justify abel">Pick A Cryptocurrency to mine, Pick A Server, GPU users should mine Ethereum, ASIC users should Mine Bitcoin &amp; Litecoin </p>
                     <div class="card rounded-0 shadow mt-3 stepcard">
                         <div class="card-body">
-                            <div class="row">
+                            <div class="row w-100">
                                 <div class="col-md-2 text-centre">
                                     <div class="stepbody">
                                         <span class="stepnumber mr">1</span>
@@ -77,133 +92,137 @@
                                 <div class="col-md-10">
                                     <div class="form-group">
                                         <label for="" class="m-0 p-0">Bitcoin POOL</label>
-                                        <input type="text" class="form-control form-control-sm" disabled value="btc.miner.host:3333">
+                                        <div class="input-group-append">
+                                            <input type="text" class="form-control form-control-sm" disabled value="btc.miner.host:3333" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                            <button type="button" class="input-group-text rounded-0 btn" id="basic-addon2" data-clipboard-text="btc.miner.host:3333" data-toggle="modal" data-target="#messageModal"><i class="fas fa-clipboard"> </i></button>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="" class="m-0 p-0">Ethereum POOL</label>
-                                        <input type="text" class="form-control form-control-sm" disabled value="eth.miner.host:6688">
+                                        <div class="input-group-append">
+                                            <input type="text" class="form-control form-control-sm" disabled value="eth.miner.host:6688" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                            <button class="input-group-text rounded-0 btn" id="basic-addon2" data-clipboard-text="eth.miner.host:6688" data-toggle="modal" data-target="#messageModal"><i class="fas fa-clipboard"></i></button>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="" class="m-0 p-0">Litecoin POOL</label>
-                                        <input type="text" class="form-control form-control-sm" disabled value="ltc.miner.host:8888">
-                                    </div>
+                                        <div class="input-group-append">
+                                            <input type="text" class="form-control form-control-sm" disabled value="ltc.miner.host:8888" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                            <button class="btn input-group-text rounded-0" id="basic-addon2" data-clipboard-text="ltc.miner.host:8888" data-toggle="modal" data-target="#messageModal"><i class="fas fa-clipboard"></i></button>
+                                        </div>
 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-10 mx-auto my-5">
-                <h4 class="stepwise">Step 2</h4>
-                <div class="hrbrand"></div>
-                <p class="mt-3 text-justify abel">Register/Login Get Your Username To Mine</p>
-                <div class="card rounded-0 shadow mt-3 stepcard">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-2">
-                                <div class="stepbody">
-                                    <span class="stepnumber mr">2</span>
-                                </div>
-                            </div>
-                            <div class="col-md-10">
-
-                                <div class="form-group">
-                                    <label for="" class="m-0 p-0">NANO Address</label>
-                                    <input type="text" id="nanoaddress" class="form-control form-control-sm" placeholder="Put Nano Address">
-                                </div>
-                                <div class="form-group">
-                                    <label for="" class="m-0 p-0">USERNAME/WORKER</label>
-                                    <input type="text" id="username" class="form-control form-control-sm" disabled placeholder="Enter Your nano Address">
-                                </div>
-                                <div class="form-group">
-                                    <label for="" class="m-0 p-0">PASSWORD</label>
-                                    <input type="text" id="pasword" class="form-control form-control-sm" disabled value="x">
-
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="row">
-                                    <div class="col-lg-2 col-md-4 col-6 my-2">
-                                        <button class="waves-light btn btn-success" id="btnSign" type="button" onclick="return storeAndDisplay()">Log in</button>
-                                        <button class="waves-light btn btn-danger" id="btnSign1" type="button" style="visibility: hidden" onclick="return logOut()">Log out</button>
-                                    </div>
-                                    <div class="col-lg-2 col-md-4 col-6 my-2">
-                                        <button class="waves-effect waves-light btn btn-primary" id="lastupdate">LASTUPDATE</button>
-                                    </div>
-                                    <div class="col-lg-2 col-md-4 col-6 my-2">
-                                        <button class="waves-effect waves-light btn btn-primary pulse green " id="btc">0.00000000 BTC</button>
-                                    </div>
-                                    <div class="col-lg-2 col-md-4 col-6 my-2">
-                                        <button class="waves-effect waves-light btn btn-primary pulse blue" id="eth">0.00000000 ETH</button>
-                                    </div>
-                                    <div class="col-lg-2 col-md-4 col-6 my-2">
-                                        <button class="waves-effect waves-light btn btn-primary pulse purple " id="ltc">0.00000000 LTC</button>
-                                    </div>
-                                    <div class="col-lg-2 col-md-4 col-6 my-2">
-                                        <button class="waves-effect waves-light btn btn-primary pulse cyan " id="nano">0.00000000 NANO</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
-        </div>
 
-
-        <div class="row">
-            <div class="col-md-10 mx-auto">
-                <h4 class="stepwise">Step 3</h4>
-                <div class="hrbrand"></div>
-                <div class="card rounded-0 shadow mt-3 stepcard">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-2">
-                                <div class="stepbody">
-                                    <span class="stepnumber mr">3</span>
+            <div class="row">
+                <div class="col-md-10 mx-auto my-5">
+                    <h4 class="stepwise">Step 2</h4>
+                    <div class="hrbrand"></div>
+                    <p class="text-muted mt-3 slogantext text-justify">Register/Login Get Your Username To Mine</p>
+                    <div class="card rounded-0 shadow mt-3 stepcard">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="stepbody">
+                                        <span class="stepnumber mr">2</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-10">
-                                <p class="text-muted mt-3 text-justify">Config Your Miners, with Our Server and username, password can be anything or x.
-                                    Then Start Mining And Get Paid In NANO, No Longer you have to wait for minimum payout threshold, NANO makes it possible for us to pay you instantly.</p>
+                                <div class="col-md-10">
 
+                                    <div class="form-group">
+                                        <label for="" class="m-0 p-0">NANO Address</label>
+                                        <input type="text" id="nanoaddress" class="form-control form-control-sm" placeholder="Put Nano Address">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="" class="m-0 p-0">USERNAME/WORKER</label>
+                                        <input type="text" id="username" class="form-control form-control-sm" disabled placeholder="Enter Your nano Address">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="" class="m-0 p-0">PASSWORD</label>
+                                        <input type="text" id="pasword" class="form-control form-control-sm" disabled value="x">
 
-                                <h3 class="text-muted my-3">Recommend Miners / Guide Links</h3>
-                                <div class="hrbrand mb-3"></div>
-                                <a class="waves-effect btn-info waves-light btn my-1 red pulse" id="btc" href="https://yadi.sk/d/jqZryd-_kAtogA" target="_blank">Custom Claymore GPU Miner (Recommened)</a>
-                                <a class="waves-effect btn-primary waves-light btn red my-1" id="btc" href="https://bitcointalk.org/index.php?topic=1433925.0" target="_blank">Claymore GPU Miner</a>
-                                <a class="waves-effect waves-light btn red btn-info my-1" id="btc" href="https://youtu.be/QNek1wjUIF4" target="_blank">ASIC SETUP GUIDE</a>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-4 col-6 my-2">
+                                            <button class="waves-light btn btn-success" id="btnSign" type="button" onclick="return storeAndDisplay()">Log in</button>
+                                            <button class="waves-light btn btn-danger" id="btnSign1" type="button" style="visibility: hidden" onclick="return logOut()">Log out</button>
+                                        </div>
+                                        <div class="col-lg-2 col-md-4 col-6 my-2">
+                                            <button class="circle-ripple btn btn-primary" id="lastupdate">LASTUPDATE</button>
+                                        </div>
+                                        <div class="col-lg-2 col-md-4 col-6 my-2">
+                                            <button class="waves-effect waves-light btn btn-primary pulse green " id="btc">0.00000000 BTC</button>
+                                        </div>
+                                        <div class="col-lg-2 col-md-4 col-6 my-2">
+                                            <button class="waves-effect waves-light btn btn-primary pulse blue" id="eth">0.00000000 ETH</button>
+                                        </div>
+                                        <div class="col-lg-2 col-md-4 col-6 my-2">
+                                            <button class="waves-effect waves-light btn btn-primary pulse purple " id="ltc">0.00000000 LTC</button>
+                                        </div>
+                                        <div class="col-lg-2 col-md-4 col-6 my-2">
+                                            <button class="waves-effect waves-light btn btn-primary pulse cyan " id="nano">0.00000000 NANO</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-10 mx-auto">
+                    <h4 class="stepwise">Step 3</h4>
+                    <div class="hrbrand"></div>
+                    <div class="card rounded-0 shadow mt-3 stepcard">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="stepbody">
+                                        <span class="stepnumber mr">3</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-10">
+                                    <p class="text-muted mt-3 text-justify">Config Your Miners, with Our Server and username, password can be anything or x.
+                                        Then Start Mining And Get Paid In NANO, No Longer you have to wait for minimum payout threshold, NANO makes it possible for us to pay you instantly.</p>
+
+
+                                    <h3 class="text-muted my-3">Recommend Miners / Guide Links</h3>
+                                    <div class="hrbrand mb-3"></div>
+                                    <a class="waves-effect btn-info waves-light btn my-1 red pulse" id="btc" href="https://yadi.sk/d/jqZryd-_kAtogA" target="_blank">Custom Claymore GPU Miner (Recommened)</a>
+                                    <a class="waves-effect btn-primary waves-light btn red my-1" id="btc" href="https://bitcointalk.org/index.php?topic=1433925.0" target="_blank">Claymore GPU Miner</a>
+                                    <a class="waves-effect waves-light btn red btn-info my-1" id="btc" href="https://youtu.be/QNek1wjUIF4" target="_blank">ASIC SETUP GUIDE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6 mx-auto">
+                <p class="text-centre text-muted">Join Us on Telegram</p>
+                <centre>
+                    <p class="text-centre px-4"><i class="fab fa-telegram fa-5x tc"></i></p>
+                </centre>
             </div>
         </div>
     </div>
-
-    <div class="col-12">
-        <div class="col-lg-2 col-md-4 col-sm-6 col-6 text-centre mx-auto">
-            <p class="text-centre text-muted">Join Us on Telegram</p>
-            <a href="https://t.me/minerhostsupport" target="_blank" class="text-centre nav-link px-4"><i class="fab fa-telegram fa-5x tc"></i></a>
-        </div>
-    </div>
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
     <script src="assets/js/jquery.easing.js"></script>
     <script src="assets/js/hover/jquery-hover-effect.js"></script>
     <script src="assets/js/animate.js"></script>
-
-
     <script src="assets/js/custom.js"></script>
 
 
@@ -250,8 +269,22 @@
         }
 
     </script>
+    <script>
+        function displayMessage() {
+            document.getElementById('messageModal').modal('show')
+        }
 
+        var clipboard = new ClipboardJS('.btn');
 
+        clipboard.on('success', function(e) {
+            console.log('copied');
+            displayMessage();
+        });
+        clipboard.on('error', function(e) {
+            console.log('faild');
+        });
+
+    </script>
 </body>
 
 </html>
