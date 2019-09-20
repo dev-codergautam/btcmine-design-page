@@ -14,21 +14,43 @@
 .tc{
     color: #186ba2;
 }
-.stepbody{
-    width:150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-top: 20%;
-    padding-left: 4px;
-    padding-top: 40%;
-    background-color: #186ba2;
+@media (min-width: 576px) {
+    
+    .stepbody{
+        width:150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-top: 20%;
+        padding-left: 4px;
+        padding-top: 40%;
+        background-color: #186ba2;
+    }
+    .stepnumber {
+        color: #fff;
+        font-size: 72px;
+        font-weight: 600;
+        text-align: center;
+        margin-left: 50px;
+    }
 }
-.stepnumber {
-    color: #fff;
-    font-size: 72px;
-    font-weight: 600;
-    text-align: center;
-    margin-left: 50px;
+@media (max-width: 576px) {
+    
+    .stepbody{
+        width:150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-top: 20%;
+        padding-left: 4px;
+        padding-top: 16%;
+        background-color: #186ba2;
+    }
+    .stepnumber {
+        color: #fff;
+        font-size: 72px;
+        font-weight: 600;
+        text-align: center;
+        margin-left: 50px;
+    }
 }
 .slogantext{
     font-weight: 600;
