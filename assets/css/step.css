@@ -11,13 +11,15 @@
 .how-section1 .row {
     margin-top: 5%;
 }
-.tc{
+
+.tc {
     color: #186ba2;
 }
+
 @media (min-width: 576px) {
-    
-    .stepbody{
-        width:150px;
+
+    .stepbody {
+        width: 150px;
         height: 150px;
         border-radius: 50%;
         margin-top: 20%;
@@ -25,18 +27,20 @@
         padding-top: 40%;
         background-color: #186ba2;
     }
+
     .stepnumber {
-        color: #fff;
+        color: #c7c2c2;
         font-size: 72px;
         font-weight: 600;
         text-align: center;
         margin-left: 50px;
     }
 }
+
 @media (max-width: 576px) {
-    
-    .stepbody{
-        width:150px;
+
+    .stepbody {
+        width: 150px;
         height: 150px;
         border-radius: 50%;
         margin-top: 20%;
@@ -44,6 +48,7 @@
         padding-top: 16%;
         background-color: #186ba2;
     }
+
     .stepnumber {
         color: #fff;
         font-size: 72px;
@@ -52,27 +57,140 @@
         margin-left: 50px;
     }
 }
-.slogantext{
+
+.slogantext {
     font-weight: 600;
     font-size: 14px;
     letter-spacing: 0.1rem;
     color: #186ba2;
     font-family: sans-serif;
 }
+
 .stepwise {
     text-transform: uppercase;
     padding: 0;
-    font-size: 40px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 400;
     text-align: left;
     text-shadow: 0 1px 0 #ffffff;
-    
-    width: auto;
+    width: 80px;
+    height: 30px;
+    padding-top: 6px;
+    border-radius: 2rem;
+    color: white;
+    padding-left: 13px;
+    padding-right: 10px;
+    background: linear-gradient(225deg, rgba(110, 141, 209, 0.79), rgba(10, 28, 78, 0.92));
+    background-size: 400% 400%;
+    -webkit-animation: AnimationName 3s ease infinite;
+    -moz-animation: AnimationName 3s ease infinite;
+    animation: AnimationName 3s ease infinite;
 }
-.stepcard{
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+.stepcard {
     border: 2px solid #186ba2;
 }
-.hrbrand{
+
+.hrbrand {
     border-bottom: 3px double #186ba2;
     width: 100px;
+}
+
+.stepp {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    -webkit-animation: mymove 5s infinite;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-timing-function: linear;
+    /* Safari 4.0 - 8.0 */
+    animation: mymove 5s infinite;
+    animation-timing-function: linear;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+    from {
+        left: 0px;
+    }
+
+    to {
+        left: 200px;
+    }
+}
+
+@keyframes mymove {
+    from {
+        left: 0px;
+    }
+
+    to {
+        left: 200px;
+    }
+}
+
+.stepanime {
+    background: linear-gradient(270deg, #b8df1b, #e69712);
+    background-size: 400% 400%;
+
+    -webkit-animation: change 30s ease infinite;
+    -moz-animation: change 30s ease infinite;
+    animation: change 30s ease infinite;
+
+    @-webkit-keyframes change {
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    @-moz-keyframes change {
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+    @keyframes change {
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
+    }
 }
