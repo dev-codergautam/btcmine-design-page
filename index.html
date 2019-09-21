@@ -1,8 +1,7 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <title>Miner Hosting</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -14,7 +13,6 @@
 
     <link href="assets/css/style.css" rel="stylesheet" />
     <link href="assets/css/step.css" rel="stylesheet" />
-    <link href="assets/css/wave.css" rel="stylesheet" />
     <link href="assets/color/default.css" rel="stylesheet" />
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700|Quicksand:300,400,500,600,700" rel="stylesheet">
@@ -30,11 +28,11 @@
     <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                
+
                 <div class="modal-body ">
-                   <p style="text-align: center">Hosting Address  Copied Successfully <i class="fas fa-check-circle ml-1"></i></p>
+                    <p style="text-align: center">Hosting Address Copied Successfully <i class="fas fa-check-circle ml-1"></i></p>
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -79,8 +77,7 @@
             <div class="row">
                 <div class="col-md-10 mx-auto my-2">
                     <h4 class="stepwise">Step 1</h4>
-                    <div class="hrbrand"></div>
-                    <p class="mt-3 text-justify abel">Pick A Cryptocurrency to mine, Pick A Server, GPU users should mine Ethereum, ASIC users should Mine Bitcoin &amp; Litecoin </p>
+                    <p class="mt-1 text-justify abel">Pick A Cryptocurrency to mine, Pick A Server, GPU users should mine Ethereum, ASIC users should Mine Bitcoin &amp; Litecoin </p>
                     <div class="card rounded-0 shadow mt-3 stepcard">
                         <div class="card-body">
                             <div class="row w-100">
@@ -123,8 +120,7 @@
             <div class="row">
                 <div class="col-md-10 mx-auto my-5">
                     <h4 class="stepwise">Step 2</h4>
-                    <div class="hrbrand"></div>
-                    <p class="text-muted mt-3 slogantext text-justify">Register/Login Get Your Username To Mine</p>
+                    <p class="text-muted mt-1 slogantext text-justify">Register/Login Get Your Username To Mine</p>
                     <div class="card rounded-0 shadow mt-3 stepcard">
                         <div class="card-body">
                             <div class="row">
@@ -152,24 +148,25 @@
                                 <div class="col-12">
                                     <div class="row">
                                         <div class="col-lg-2 col-md-4 col-6 my-2">
-                                            <button class="waves-light btn btn-success" id="btnSign" type="button" onclick="return storeAndDisplay()">Log in</button>
-                                            <button class="waves-light btn btn-danger" id="btnSign1" type="button" style="visibility: hidden" onclick="return logOut()">Log out</button>
+                                            <button class=" btn btn-success" id="btnSign" type="button" onclick="return storeAndDisplay()">Log in</button>
+                                            <button class=" btn btn-danger" id="btnSign1" type="button" style="visibility: hidden" onclick="return logOut()">Log out</button>
+                                        </div>
+                                        <div class="col-lg-2 col-md-4 col-6 my-2 ">
+                                            <button class="btn-primary btn" id="lastupdate">LASTUPDATE</button>
                                         </div>
                                         <div class="col-lg-2 col-md-4 col-6 my-2">
-                                            <button class="circle-ripple btn btn-primary" id="lastupdate">LASTUPDATE</button>
+                                            <button class="btn btn-primary pulse green " id="btc">0.00000000 BTC</button>
                                         </div>
                                         <div class="col-lg-2 col-md-4 col-6 my-2">
-                                            <button class="waves-effect waves-light btn btn-primary pulse green " id="btc">0.00000000 BTC</button>
+                                            <button class="btn btn-primary pulse blue" id="eth">0.00000000 ETH</button>
                                         </div>
                                         <div class="col-lg-2 col-md-4 col-6 my-2">
-                                            <button class="waves-effect waves-light btn btn-primary pulse blue" id="eth">0.00000000 ETH</button>
+                                            <button class="btn btn-primary pulse purple " id="ltc">0.00000000 LTC</button>
                                         </div>
                                         <div class="col-lg-2 col-md-4 col-6 my-2">
-                                            <button class="waves-effect waves-light btn btn-primary pulse purple " id="ltc">0.00000000 LTC</button>
+                                            <button class="btn btn-primary pulse cyan " id="nano">0.00000000 NANO</button>
                                         </div>
-                                        <div class="col-lg-2 col-md-4 col-6 my-2">
-                                            <button class="waves-effect waves-light btn btn-primary pulse cyan " id="nano">0.00000000 NANO</button>
-                                        </div>
+                                        <script src="https://code.jquery.com/jquery-2.0.0.js"></script>
                                     </div>
                                 </div>
                             </div>
@@ -181,7 +178,6 @@
 
             <div class="row">
                 <div class="col-md-10 mx-auto">
-                    <h4 class="stepwise">Step 3</h4>
                     <div class="hrbrand"></div>
                     <div class="card rounded-0 shadow mt-3 stepcard">
                         <div class="card-body">
@@ -283,6 +279,53 @@
         clipboard.on('error', function(e) {
             console.log('faild');
         });
+
+    </script>
+    <script>
+        var heart = document.getElementsByClassName('heart')[1],
+            pfx = ["webkit", "moz", "MS", "o", ""],
+            hovered = false;
+
+        function AnimationListener() {
+            if (hovered) {
+                heart.classList.remove('animated');
+                heart.style.webkitTransform = 'scale(2)';
+                heart.style.MozTransform = 'scale(2)';
+                heart.style.msTransform = 'scale(2)';
+                heart.style.OTransform = 'scale(2)';
+                heart.style.transform = 'scale(2)';
+            }
+        }
+
+        function TransitionListener() {
+            if (!hovered) {
+                heart.classList.add('animated');
+            }
+        }
+
+        function PrefixedEvent(element, type, callback) {
+            for (var p = 0; p < pfx.length; p++) {
+                if (!pfx[p]) type = type.toLowerCase();
+                element.addEventListener(pfx[p] + type, callback, false);
+            }
+        }
+
+        PrefixedEvent(heart, "AnimationIteration", AnimationListener);
+
+        heart.onmouseover = function() {
+            hovered = true;
+        }
+        heart.onmouseout = function() {
+            setTimeout(function() {
+                hovered = false;
+            }, 500);
+            PrefixedEvent(heart, "TransitionEnd", TransitionListener);
+            heart.style.webkitTransform = 'scale(1)';
+            heart.style.MozTransform = 'scale(1)';
+            heart.style.msTransform = 'scale(1)';
+            heart.style.OTransform = 'scale(1)';
+            heart.style.transform = 'scale(1)';
+        }
 
     </script>
 </body>
