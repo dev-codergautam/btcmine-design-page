@@ -32,44 +32,14 @@ a:hover {
 .slogan h1 span {
 	color: #3498db;
 }
-
-.tweet a {
-	color:#3498db;
-}
-
-.tweet .tweet_time a:hover i {
-	color:#3498db;
+.slogan h2 span {
+	color: #3498db;
+    font-size: 35px;
+    font-weight: 600;
 }
 
 
 
-/* fontawesome icons */
-.icon-square:hover,
-.icon-rounded:hover,
-.icon-circled:hover {
-    background-color: #3498db;
-}
-[class^="icon-"].active,
-[class*=" icon-"].active {
-    background-color: #3498db;
-}
-
-
-
-
-.navbar .nav > li > a:hover {
-  color: #3498db;
-}
-
-
-ul.nav li.current {
-  background: #3498db;
-}
-.dropdown-menu li > a:hover,
-.dropdown-menu li > a:focus,
-.dropdown-submenu:hover > a {
-	background: #3498db;
-}
 
 input:focus, textarea:focus {
 	border: 1px solid #3498db;
@@ -97,31 +67,4 @@ input[type="color"]:focus,
 ul.contact-list li input.form_input:focus ,
 ul.contact-list li textarea.form_textarea:focus  {
 	border-color:#3498db;
-}
-
-
-/* tab */
-
-.nav-tabs > a {
-	color:#3498db;
-}
-
-
-/* accordion */
-.accordion-heading a:hover {
-	color: #3498db;
-}
-.accordion-heading .active{
-	color: #3498db;
-}
-
-.accordion-inner {
-
-}
-
-
-/* portfolio */
-
-.thumb-wrapp{
-	background:#3498db;
 }
